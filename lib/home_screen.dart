@@ -12,6 +12,7 @@ import 'package:anny/animation_switcher.dart';
 import 'package:anny/animation_widget.dart';
 import 'package:anny/decoration_box_transition.dart';
 import 'package:anny/position_transition.dart';
+import 'package:anny/slide_transition.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -232,6 +233,21 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: AnimationListItem(
                     title: 'Position Transition',
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
+                        return MySlideTransition(
+                          appBarTitle: 'Slide Transition',
+                        );
+                      }),
+                    );
+                  },
+                  child: AnimationListItem(
+                    title: 'Slide Transition',
                   ),
                 ),
               ],
