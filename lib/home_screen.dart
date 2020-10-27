@@ -11,6 +11,7 @@ import 'package:anny/animation_positioned.dart';
 import 'package:anny/animation_switcher.dart';
 import 'package:anny/animation_widget.dart';
 import 'package:anny/decoration_box_transition.dart';
+import 'package:anny/hero_animation.dart';
 import 'package:anny/position_transition.dart';
 import 'package:anny/slide_transition.dart';
 import 'package:flutter/material.dart';
@@ -218,6 +219,24 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: AnimationListItem(
                     title: 'Decorated Box Transition',
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
+                        return MyHero(
+                          appBarTitle: 'Hero Animation',
+                        );
+                      }),
+                    );
+                  },
+                  child: Hero(
+                    tag: Hero,
+                    child: AnimationListItem(
+                      title: 'Hero Animation',
+                    ),
                   ),
                 ),
                 InkWell(
