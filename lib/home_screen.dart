@@ -13,6 +13,7 @@ import 'package:anny/animation_widget.dart';
 import 'package:anny/decoration_box_transition.dart';
 import 'package:anny/hero_animation.dart';
 import 'package:anny/position_transition.dart';
+import 'package:anny/size_transition.dart';
 import 'package:anny/slide_transition.dart';
 import 'package:flutter/material.dart';
 
@@ -267,6 +268,21 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: AnimationListItem(
                     title: 'Slide Transition',
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
+                        return MySizeTransition(
+                          appBarTitle: 'Size Transition',
+                        );
+                      }),
+                    );
+                  },
+                  child: AnimationListItem(
+                    title: 'Size Transition',
                   ),
                 ),
               ],
