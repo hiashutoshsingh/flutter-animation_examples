@@ -37,7 +37,10 @@ class _MySizeTransitionState extends State<MySizeTransition> with SingleTickerPr
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(widget.appBarTitle.toUpperCase()),
+        title: Text(
+          widget.appBarTitle.toUpperCase(),
+          style: TextStyle(color: Colors.white, letterSpacing: 1, fontSize: 20, fontWeight: FontWeight.w600),
+        ),
       ),
       body: SizeTransition(
         sizeFactor: _animation,
