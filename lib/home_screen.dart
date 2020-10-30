@@ -1,3 +1,4 @@
+import 'package:anny/animation_align.dart';
 import 'package:anny/animation_builder.dart';
 import 'package:anny/animation_container.dart';
 import 'package:anny/animation_cross_fade.dart';
@@ -299,6 +300,21 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: AnimationListItem(
                     title: 'Scale Transition',
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
+                        return MyAnimationAlign(
+                          appBarTitle: 'Animation Align',
+                        );
+                      }),
+                    );
+                  },
+                  child: AnimationListItem(
+                    title: 'Animation Align',
                   ),
                 ),
               ],
