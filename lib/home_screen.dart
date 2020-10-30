@@ -13,6 +13,7 @@ import 'package:anny/animation_widget.dart';
 import 'package:anny/decoration_box_transition.dart';
 import 'package:anny/hero_animation.dart';
 import 'package:anny/position_transition.dart';
+import 'package:anny/rotation_transition.dart';
 import 'package:anny/scale_transition.dart';
 import 'package:anny/size_transition.dart';
 import 'package:anny/slide_transition.dart';
@@ -299,6 +300,21 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: AnimationListItem(
                     title: 'Scale Transition',
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
+                        return MyRotationTransition(
+                          appBarTitle: 'Rotation Transition',
+                        );
+                      }),
+                    );
+                  },
+                  child: AnimationListItem(
+                    title: 'Rotation Transition',
                   ),
                 ),
               ],
