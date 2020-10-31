@@ -26,10 +26,9 @@ class _MySizeTransitionState extends State<MySizeTransition> with SingleTickerPr
 
   @override
   void dispose() {
-    super.dispose();
-
     /// disposes the animation controller
     _animationController.dispose();
+    super.dispose();
   }
 
   @override

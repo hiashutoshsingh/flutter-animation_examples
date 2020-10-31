@@ -11,8 +11,7 @@ class MySlideTransition extends StatefulWidget {
   _MySlideTransitionState createState() => _MySlideTransitionState();
 }
 
-class _MySlideTransitionState extends State<MySlideTransition>
-    with SingleTickerProviderStateMixin {
+class _MySlideTransitionState extends State<MySlideTransition> with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<Offset> _offsetAnimation;
 
@@ -62,7 +61,7 @@ class _MySlideTransitionState extends State<MySlideTransition>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 }
