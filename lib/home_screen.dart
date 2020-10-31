@@ -1,3 +1,4 @@
+import 'package:anny/animation_align.dart';
 import 'package:anny/animation_builder.dart';
 import 'package:anny/animation_container.dart';
 import 'package:anny/animation_cross_fade.dart';
@@ -14,6 +15,7 @@ import 'package:anny/animation_widget.dart';
 import 'package:anny/decoration_box_transition.dart';
 import 'package:anny/hero_animation.dart';
 import 'package:anny/position_transition.dart';
+import 'package:anny/rotation_transition.dart';
 import 'package:anny/scale_transition.dart';
 import 'package:anny/size_transition.dart';
 import 'package:anny/slide_transition.dart';
@@ -307,6 +309,36 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) {
+                        return MyAnimationAlign(
+                          appBarTitle: 'Animation Align',
+                        );
+                      }),
+                    );
+                  },
+                  child: AnimationListItem(
+                    title: 'Animation Align',
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
+                        return MyRotationTransition(
+                          appBarTitle: 'Rotation Transition',
+                        );
+                      }),
+                    );
+                  },
+                  child: AnimationListItem(
+                    title: 'Rotation Transition',
+                  ),
+                ),
+                 InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
                         return MyAnimationPhysicalModel(
                           appBarTitle: 'Physical Model Animation',
                         );
@@ -314,7 +346,7 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                   child: AnimationListItem(
-                    title: 'Physical Model Animation',
+                     title: 'Physical Model Animation',
                   ),
                 ),
               ],
