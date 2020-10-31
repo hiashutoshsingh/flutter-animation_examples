@@ -27,10 +27,10 @@ class _MyScaleTransitionState extends State<MyScaleTransition> with SingleTicker
 
   @override
   void dispose() {
+        /// disposes the animation controller
+    _animationController.dispose();
     super.dispose();
 
-    /// disposes the animation controller
-    _animationController.dispose();
   }
 
   @override
