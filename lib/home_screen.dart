@@ -8,6 +8,7 @@ import 'package:anny/animation_list.dart';
 import 'package:anny/animation_list_item.dart';
 import 'package:anny/animation_opacity.dart';
 import 'package:anny/animation_padding.dart';
+import 'package:anny/animation_physical_model.dart';
 import 'package:anny/animation_positioned.dart';
 import 'package:anny/animation_switcher.dart';
 import 'package:anny/animation_widget.dart';
@@ -331,6 +332,21 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: AnimationListItem(
                     title: 'Rotation Transition',
+                  ),
+                ),
+                 InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
+                        return MyAnimationPhysicalModel(
+                          appBarTitle: 'Physical Model Animation',
+                        );
+                      }),
+                    );
+                  },
+                  child: AnimationListItem(
+                     title: 'Physical Model Animation',
                   ),
                 ),
               ],
