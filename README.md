@@ -1,6 +1,6 @@
 # Anny
 
-A Flutter application for learning animations concept.
+Flutter application for learning animations concept.
 
 ### License
 
