@@ -2,6 +2,8 @@
 
 Flutter application for learning animations concept.
 
+Checkout the live demo [here](https://flutter-developer-animation.web.app).
+
 ### License
 
 ```
