@@ -11,22 +11,26 @@ class MyAnimationBuilder extends StatefulWidget {
   _MyAnimationBuilderState createState() => _MyAnimationBuilderState();
 }
 
-class _MyAnimationBuilderState extends State<MyAnimationBuilder>
-    with TickerProviderStateMixin {
+class _MyAnimationBuilderState extends State<MyAnimationBuilder> with TickerProviderStateMixin {
   Animation _heartbeatAnimation;
   AnimationController _animationController;
 
   @override
   void initState() {
     super.initState();
+
+    /// initializing AnimationController
     _animationController = AnimationController(
       vsync: this,
+
+      /// duration is the period of time the animation would last
       duration: Duration(
         seconds: 1,
       ),
     );
 
-    /// defining type of animation
+    /// Tween is to configure an animation to interpolate to a different range or data type
+    /// A CurvedAnimation defines progression as a non-linear curve.
     _heartbeatAnimation = Tween(begin: 180.0, end: 165.0).animate(
       CurvedAnimation(
         curve: Curves.easeOutBack,
@@ -35,14 +39,16 @@ class _MyAnimationBuilderState extends State<MyAnimationBuilder>
     );
 
     /// setting listener on animation and
-    /// getting its status all time when its state is changes
-    _animationController.addStatusListener((AnimationStatus status) {
-      if (status == AnimationStatus.completed) {
-        _animationController.repeat();
-      }
-    });
+    /// getting its status continuously everytime when its state changes
+    _animationController.addStatusListener(
+      (AnimationStatus status) {
+        if (status == AnimationStatus.completed) {
+          _animationController.repeat();
+        }
+      },
+    );
 
-    /// to start the animation
+    /// forward starts the animation
     _animationController.forward();
   }
 
@@ -78,7 +84,7 @@ class _MyAnimationBuilderState extends State<MyAnimationBuilder>
                   Icons.favorite,
                   color: Colors.blue[900],
 
-                  /// size changes as per set in Tween
+                  /// size varies from given range in Tween
                   size: _heartbeatAnimation.value,
                 ),
               ),
