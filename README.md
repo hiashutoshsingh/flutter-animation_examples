@@ -2,12 +2,12 @@
 
 Flutter application for learning animations concept.
 
-Checkout the live demo [here](https://flutter-developer-animation.web.app).
+Checkout the live demo https://flutter-developer-animation.web.app
 
 ### License
 
 ```
- Copyright 2020 Ashutosh Singh
+ Copyright 2021 Ashutosh Singh
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
